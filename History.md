@@ -1,3 +1,27 @@
+0.8.0 / 2015-02-17
+=================
+* [ENHANCEMENT] `node-soap` is now also compatible (and tested) with `node v0.12.0` and `io.js` too. (#571)
+
+* [FIX] Adds support for attributes in the `SOAP Body` Element (fixes #386). (#574)
+
+0.7.0 / 2015-02-10
+=================
+* [ENHANCEMENT] Server emits a `headers` event to globally handle SOAP Headers. (#564 )
+
+* [ENHANCEMENT] A service method can send back a SOAP Fault response to a client by throwing an object that contains a `Fault` property. (#563)
+
+* [FIX] Don't throw an Error if an `element` is not defined. (#562)
+
+* [ENHANCEMENT] Added more primitive types (`['positiveInteger', 'nonPositiveInteger', 'negativeInteger', 'nonNegativeInteger']`). (#560)
+
+* [FIX] Respect empty SOAP actions in operations. (#554)
+
+* [ENHANCEMENT] The client now emits `message`,  `request` and `soapError` events. (#547, #559)
+
+* [ENHANCEMENT] The server is now aware of the SOAP header(s) from incoming request. (#551)
+
+* [ENHANCEMENT] Until now, only the SOAP Body was returned from the invoked client method. With this PR also the SOAP Header(s) will be returned. (#539)
+
 0.6.1 / 2014-12-20
 ==================
 * [ENHANCEMENT] Allow logging of received `XML` prior to parsing and processing it, which allows better debugging of incoming`XML`. (#524)
